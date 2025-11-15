@@ -1,59 +1,11 @@
-# SkoHub Pages
+## About
 
-This is an example repository (formerly named `skohub-docker-vocabs`) to show how you can publish your SKOS vocabulary using GitHub infrastructure (Actions and Pages).
+The Montessori Glossary Community Project is an open community dedicated to knowledge equity, shared authority, and the co-creation of an open-access vocabulary of Montessori terms. We welcome participants from diverse backgrounds, including practitioners, scholars, activists, and others.
 
-Every time a change is made to a vocabulary a GitHub-workflow-action is triggered to publish the most recent vocabulary to the `gh-pages`-branch, which is used by GitHub pages.
-It spins up a Docker container made from [SkoHub Vocabs](https://github.com/hbz/skohub-vocabs).
+## Mission
 
-## Usage
+Through collective efforts across an interwoven network, we pursue our mission of co-constructing and maintaining an open-access controlled vocabulary of Montessori terms. The Montessori Glossary is an evolving, iterative co-construction project grounded in shared knowledge and authority. As a controlled vocabulary of terms used to describe Montessori information resources, the glossary aims to serve as a companion to broad subject term vocabularies. Our mission is to improve discovery and access to Montessori resources whilst supporting Montessori educator competencies. We envision an international, multilingual linked data vocabulary of Montessori terms that enhances access to Montessori resources within cultural institutions, community archives, and Montessori teacher preparation programs. Leveraging Web 2.0 technologies, we endeavor to facilitate a participatory process that lifts up the multiplicity of diverse perspectives, meanings, and contexts. In the spirit of democratization and shared knowledge production, we seek to sustain a living vocabulary that is inclusive, culturally-sustaining, and multilingual.
 
-If you want to reuse this repo and have your vocabulary automatically pushed und published via GitHub-Pages, follow these steps:
-
-1. Fork this repo. **Uncheck the box to only fork the main branch**.
-1. Go to "Actions" tab and if not already activated, activate GitHub Actions.
-1. Go to "Settings", navigate to the "Pages" setting and select `gh-pages` as the branch your site is being built from. 
-1. Go back to the main page of your repo and click the little gear icon in the top right of the "About" section. Check the box at "Use your GitHub Pages website".
-1. Add a commit to the main branch and your vocabulary will be automatically published (sometimes it takes a little to see the changes, remember to do some hard refreshing).
-
-Any issues? Please open up a issue [here](https://github.com/skohub-io/skohub-pages/issues)
-
-## Custom Domain
-
-If you want to host your vocabularies under your GitHub pages domain (so no W3 perma-id or purl.org redirect), you have to provide that domain in the [`config.yaml`](./config.yaml).
-
-Example:
-
-Your GitHub Pages domain is: `https://skohub-io.github.io/skohub-pages/`
-Then provide `https://skohub-io.github.io/skohub-pages/` as `custom_domain` in your `config.yaml`.
-
-The base of your concept scheme could then be something like: `https://skohub-io.github.io/skohub-pages/colours/`
-
-Notice that this will apply to all your hosted vocabularies.
-
-## Troubleshooting
-
-### There is no `gh-pages` branch to select for GitHub Pages
-
-You probably only forked the main branch.
-You have two options:
-
-- Delete the repo and fork it again, but make sure to uncheck the box to only fork the main branch
-- Make sure the GitHub Action is activated ➡️ Go to "Actions" tab and activate it. After that commit changes to a vocabulary in the main branch. This should trigger the build and create a `gh-pages` branch.
-
-### I push changes, but they seem to have no effect. My vocabulary stays the same
-
-Maybe your GitHub Action is not activated yet.
-Go to the "Actions" tab and activate GitHub Actions for your repository.
-
-### During the build I get an error saying `The requested URL returned error: 403`
-
-You maybe need to update permissions like described here: https://github.com/peaceiris/actions-gh-pages/issues/744
-Go to `Settings` > `Actions` > `General` > `Workflow permissions` and toggle the Read and write permissions.
-
-## CHANGELOG
-
-09.02.2021:
-
-- In an earlier version, there was the .env variable `PATH_PREFIX` set to point to the repository the vocabulary is hosted at. To align with rest of code, this was changed to `BASEURL`.
-- The docker image now also support i18n
+## History
+The educational science, methodology, and philosophy of Dr. Maria Montessori keep revealing ‘new‘ insights that modern science is only now just (re)confirming, yet other elements of her work are more ‘time-bound’, some have evolved, or have the potential to evolve, into new areas of educational greatness. We encourage looking for inspiration in the work of peers and mentors of Montessori, as well as finding conformation in modern science. Especially in relation to the third and fourth planes, where Montessori’s work was far from complete. If anything, we read her work as an invitation for the generations following in her observing scientific and spiritual educational footsteps to continue discovering how best to help adolescents and young adults to become interdependent, listen to their inner guide, and be proactive members of the local and global community serving peace, equity, and mother earth with all their talents and abilities. This is a task of the community, and the community includes you. As such we welcome happy inspiration, valid critique, new sources, other points of view, and so on. The Montessori community thrives best when we aim to inspire each other in honour of the inspiration we all have found in Dr. Montessori’s work.
 
